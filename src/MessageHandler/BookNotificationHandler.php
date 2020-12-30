@@ -19,7 +19,7 @@ class BookNotificationHandler implements MessageHandlerInterface
     public function __invoke(BookNotificationMessage $message)
     {
         $email = (new Email())
-            ->from('no-reply@first-api.dev')
+            ->from('noreply@first-api.dev')
             ->to('admin@first-api.dev')
             ->priority(Email::PRIORITY_NORMAL)
             ->subject('A new book has been added')
